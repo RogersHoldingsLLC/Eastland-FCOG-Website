@@ -7,8 +7,9 @@
   --eastland-cream: #f7f4ec;
   --eastland-paper: #ffffff;
   --eastland-ink: #142231;
-  --shadow: 0 20px 45px rgba(0, 25, 54, 0.16);
-  --radius: 8px;
+  --shadow: 0 24px 60px rgba(0, 25, 54, 0.14);
+  --shadow-soft: 0 14px 36px rgba(0, 25, 54, 0.08);
+  --radius: 14px;
 }
 
 * {
@@ -50,6 +51,7 @@ a {
   padding: 14px clamp(18px, 4vw, 56px);
   background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid rgba(5, 37, 68, 0.12);
+  box-shadow: 0 8px 30px rgba(0, 25, 54, 0.05);
   backdrop-filter: blur(14px);
 }
 
@@ -68,6 +70,10 @@ a {
   font-weight: 700;
 }
 
+.main-nav a {
+  padding: 8px 0;
+}
+
 .main-nav a,
 .text-link {
   text-decoration-color: rgba(217, 169, 58, 0.65);
@@ -81,7 +87,7 @@ a {
   align-items: center;
   gap: clamp(28px, 5vw, 72px);
   min-height: calc(100svh - 85px);
-  padding: clamp(40px, 7vw, 96px) clamp(18px, 5vw, 72px);
+  padding: clamp(56px, 8vw, 112px) clamp(20px, 5vw, 80px);
   background:
     linear-gradient(115deg, rgba(0, 25, 54, 0.94), rgba(5, 37, 68, 0.84)),
     var(--eastland-navy);
@@ -89,7 +95,7 @@ a {
 }
 
 .hero-copy {
-  max-width: 650px;
+  max-width: 720px;
 }
 
 .eyebrow {
@@ -117,9 +123,9 @@ h3 {
 }
 
 h1 {
-  max-width: 11ch;
+  max-width: 13.5ch;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: clamp(3rem, 7vw, 6.5rem);
   font-weight: 700;
 }
 
@@ -153,7 +159,7 @@ h3 {
   min-height: 46px;
   align-items: center;
   justify-content: center;
-  padding: 11px 18px;
+  padding: 12px 20px;
   border: 2px solid transparent;
   border-radius: var(--radius);
   font-weight: 800;
@@ -190,7 +196,7 @@ h3 {
   display: grid;
   grid-template-columns: minmax(220px, 0.34fr) 1fr;
   gap: clamp(24px, 5vw, 56px);
-  padding: clamp(36px, 6vw, 80px) clamp(18px, 5vw, 72px);
+  padding: clamp(48px, 7vw, 92px) clamp(20px, 5vw, 80px);
   background: var(--eastland-paper);
 }
 
@@ -208,14 +214,14 @@ h3 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1px;
   overflow: hidden;
-  border: 1px solid rgba(5, 37, 68, 0.12);
+  border: 1px solid rgba(5, 37, 68, 0.1);
   border-radius: var(--radius);
   background: rgba(5, 37, 68, 0.12);
 }
 
 .time-grid article {
-  min-height: 132px;
-  padding: 22px;
+  min-height: 140px;
+  padding: 24px;
   background: var(--eastland-cream);
 }
 
@@ -242,7 +248,7 @@ h3 {
   grid-template-columns: minmax(300px, 1fr) minmax(0, 0.82fr);
   align-items: center;
   gap: clamp(28px, 5vw, 64px);
-  padding: clamp(44px, 7vw, 96px) clamp(18px, 5vw, 72px);
+  padding: clamp(56px, 8vw, 112px) clamp(20px, 5vw, 80px);
 }
 
 .split-section img {
@@ -265,7 +271,7 @@ h3 {
 }
 
 .content-section {
-  padding: clamp(44px, 7vw, 96px) clamp(18px, 5vw, 72px);
+  padding: clamp(56px, 8vw, 112px) clamp(20px, 5vw, 80px);
   background: var(--eastland-paper);
 }
 
@@ -286,10 +292,10 @@ h3 {
 .info-card,
 .featured-event,
 .announcement-card {
-  border: 1px solid rgba(5, 37, 68, 0.12);
+  border: 1px solid rgba(5, 37, 68, 0.1);
   border-radius: var(--radius);
   background: var(--eastland-paper);
-  box-shadow: 0 14px 32px rgba(0, 25, 54, 0.1);
+  box-shadow: var(--shadow-soft);
 }
 
 .info-card {
@@ -325,10 +331,10 @@ h3 {
 
 .image-card {
   overflow: hidden;
-  border: 1px solid rgba(5, 37, 68, 0.12);
+  border: 1px solid rgba(5, 37, 68, 0.1);
   border-radius: var(--radius);
   background: var(--eastland-paper);
-  box-shadow: 0 14px 32px rgba(0, 25, 54, 0.1);
+  box-shadow: var(--shadow-soft);
 }
 
 .image-card picture {
@@ -353,7 +359,9 @@ h3 {
 }
 
 .announcements {
-  background: linear-gradient(180deg, var(--eastland-paper), var(--eastland-cream));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 244, 236, 0.96)),
+    var(--eastland-cream);
 }
 
 .giving-section {
@@ -361,7 +369,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: clamp(24px, 5vw, 64px);
-  padding: clamp(44px, 7vw, 84px) clamp(18px, 5vw, 72px);
+  padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 80px);
   background:
     linear-gradient(110deg, rgba(5, 37, 68, 0.96), rgba(22, 62, 102, 0.9)),
     var(--eastland-navy);
@@ -411,7 +419,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr minmax(260px, 420px);
   gap: clamp(24px, 5vw, 64px);
-  padding: clamp(44px, 7vw, 96px) clamp(18px, 5vw, 72px);
+  padding: clamp(56px, 8vw, 112px) clamp(20px, 5vw, 80px);
   background: var(--eastland-navy);
   color: var(--eastland-paper);
 }
@@ -430,7 +438,7 @@ h3 {
   display: flex;
   align-items: center;
   min-height: 56px;
-  padding: 14px 18px;
+  padding: 16px 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.08);
@@ -494,15 +502,37 @@ h3 {
 @media (max-width: 680px) {
   .site-header {
     position: static;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
+    padding: 18px;
+  }
+
+  .brand {
+    width: min(230px, 72vw);
   }
 
   .main-nav {
+    display: grid;
     width: 100%;
-    overflow-x: auto;
-    padding-bottom: 4px;
-    white-space: nowrap;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .main-nav a {
+    min-height: 42px;
+    padding: 10px 8px;
+    border: 1px solid rgba(5, 37, 68, 0.12);
+    border-radius: 999px;
+    background: rgba(247, 244, 236, 0.8);
+    text-decoration: none;
+  }
+
+  h1 {
+    max-width: 12.5ch;
+    font-size: clamp(2.8rem, 15vw, 4.7rem);
   }
 
   .time-grid,
