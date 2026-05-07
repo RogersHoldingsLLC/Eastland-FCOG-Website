@@ -68,16 +68,20 @@ button,
   justify-content: space-between;
   gap: 24px;
   padding: 14px clamp(18px, 4vw, 56px);
-  background: rgba(255, 255, 255, 0.94);
+  background: var(--eastland-paper);
   border-bottom: 1px solid rgba(5, 37, 68, 0.12);
   box-shadow: 0 8px 30px rgba(0, 25, 54, 0.05);
-  backdrop-filter: blur(14px);
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
   width: min(210px, 42vw);
+}
+
+.brand img {
+  background: var(--eastland-paper);
+  mix-blend-mode: multiply;
 }
 
 .main-nav {
@@ -358,7 +362,6 @@ h3 {
   line-height: 1;
 }
 
-/* The split-section styles can stay even if that section is currently removed. */
 .split-section {
   display: grid;
   grid-template-columns: minmax(300px, 1fr) minmax(0, 0.82fr);
