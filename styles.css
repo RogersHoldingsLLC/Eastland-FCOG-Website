@@ -519,6 +519,180 @@ h3 {
     var(--eastland-cream);
 }
 
+.app-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+  padding: clamp(56px, 8vw, 104px) clamp(20px, 5vw, 80px);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(217, 169, 58, 0.18), transparent 28%),
+    linear-gradient(135deg, var(--eastland-paper), rgba(247, 244, 236, 0.92));
+  border-bottom: 1px solid rgba(5, 37, 68, 0.08);
+}
+
+.app-copy p:not(.eyebrow) {
+  max-width: 62ch;
+  margin: 16px 0 0;
+  font-size: clamp(1.12rem, 1.35vw, 1.22rem);
+}
+
+.install-steps {
+  display: grid;
+  gap: 16px;
+  max-width: 640px;
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.install-steps li {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  align-items: start;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid rgba(5, 37, 68, 0.1);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow-soft);
+}
+
+.install-steps li > span {
+  display: inline-flex;
+  width: 54px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--eastland-navy);
+  color: var(--eastland-gold);
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.install-steps strong {
+  display: block;
+  color: var(--eastland-navy);
+  font-size: 1.16rem;
+}
+
+.install-steps p {
+  margin: 4px 0 0;
+  font-size: 1.04rem;
+}
+
+.app-preview {
+  position: relative;
+  display: grid;
+  min-height: 560px;
+  place-items: center;
+}
+
+.phone-mockup {
+  position: relative;
+  width: min(330px, 78vw);
+  min-height: 560px;
+  overflow: hidden;
+  padding: 34px 22px 24px;
+  border: 10px solid #111827;
+  border-radius: 44px;
+  background: var(--eastland-paper);
+  box-shadow: 0 32px 80px rgba(0, 25, 54, 0.24);
+  transform: rotate(3deg);
+}
+
+.phone-speaker {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  width: 98px;
+  height: 18px;
+  border-radius: 999px;
+  background: #111827;
+  transform: translateX(-50%);
+}
+
+.phone-mockup img {
+  width: 180px;
+  margin: 18px auto 20px;
+  mix-blend-mode: multiply;
+}
+
+.phone-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.phone-nav span {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(5, 37, 68, 0.1);
+  border-radius: 999px;
+  background: var(--eastland-cream);
+  color: var(--eastland-navy);
+  font-size: 0.92rem;
+  font-weight: 800;
+  box-shadow: 0 6px 16px rgba(0, 25, 54, 0.08);
+}
+
+.phone-nav span:last-child {
+  grid-column: 1 / -1;
+}
+
+.phone-hero {
+  margin: 28px -22px -24px;
+  padding: 32px 24px 90px;
+  background: var(--eastland-navy);
+  color: var(--eastland-paper);
+}
+
+.phone-hero small {
+  display: block;
+  color: var(--eastland-gold);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.phone-hero strong {
+  display: block;
+  max-width: 9ch;
+  margin-top: 10px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.5rem;
+  line-height: 1.02;
+}
+
+.app-icon-card {
+  position: absolute;
+  right: clamp(0px, 2vw, 30px);
+  bottom: 28px;
+  display: grid;
+  width: 168px;
+  place-items: center;
+  padding: 18px 16px;
+  border-radius: 32px;
+  background: var(--eastland-paper);
+  box-shadow: 0 22px 54px rgba(0, 25, 54, 0.2);
+}
+
+.app-icon-card img {
+  width: 92px;
+  border-radius: 22px;
+}
+
+.app-icon-card strong {
+  margin-top: 8px;
+  color: var(--eastland-navy);
+  font-size: 1.48rem;
+  letter-spacing: 0.04em;
+}
+
 .giving-section {
   display: flex;
   align-items: center;
@@ -549,6 +723,55 @@ h3 {
   gap: 24px;
   margin-bottom: clamp(22px, 4vw, 40px);
   padding: clamp(22px, 3vw, 34px);
+}
+
+.worship-featured {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0 58%, rgba(5, 37, 68, 0.88)),
+    url("assets/images/eastland-church-hero.jpg") center right / cover;
+}
+
+.worship-featured::after {
+  position: absolute;
+  right: -50px;
+  bottom: -70px;
+  width: 240px;
+  height: 240px;
+  border: 24px solid rgba(217, 169, 58, 0.22);
+  border-radius: 999px;
+  content: "";
+}
+
+.worship-featured > * {
+  position: relative;
+  z-index: 1;
+}
+
+.worship-callout {
+  display: grid;
+  min-width: min(280px, 100%);
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--radius);
+  background: rgba(5, 37, 68, 0.86);
+  color: var(--eastland-paper);
+  box-shadow: 0 18px 44px rgba(0, 25, 54, 0.18);
+}
+
+.worship-callout span {
+  color: var(--eastland-gold);
+  font-size: 0.92rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.worship-callout strong {
+  margin-top: 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.02;
 }
 
 .announcement-grid article {
@@ -712,6 +935,7 @@ h3 {
   .hero,
   .service-band,
   .split-section,
+  .app-section,
   .connect-section {
     grid-template-columns: 1fr;
   }
@@ -724,6 +948,10 @@ h3 {
 
   .hero {
     min-height: auto;
+  }
+
+  .app-preview {
+    min-height: 500px;
   }
 
   .time-grid,
@@ -775,6 +1003,42 @@ h3 {
   .announcement-grid,
   .two-column {
     grid-template-columns: 1fr;
+  }
+
+  .install-steps li {
+    grid-template-columns: 46px 1fr;
+  }
+
+  .install-steps li > span {
+    width: 46px;
+    height: 46px;
+  }
+
+  .app-preview {
+    min-height: auto;
+  }
+
+  .phone-mockup {
+    width: min(310px, 100%);
+    min-height: 500px;
+    transform: none;
+  }
+
+  .app-icon-card {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: -54px;
+  }
+
+  .worship-featured {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 244, 236, 0.96)),
+      var(--eastland-paper);
+  }
+
+  .worship-callout {
+    width: 100%;
   }
 
   .hero-actions {
