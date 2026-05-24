@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" role="img" aria-labelledby="title desc">
+  <title id="title">Pastor photo coming soon</title>
+  <desc id="desc">A cheerful placeholder with two smiling people and the words Coming Soon.</desc>
+  <rect width="1254" height="1254" fill="#f7f4ec"/>
+  <circle cx="1040" cy="168" r="220" fill="#d9a93a" opacity="0.16"/>
+  <circle cx="206" cy="1090" r="280" fill="#163e66" opacity="0.12"/>
+  <path d="M152 850c98-121 238-187 420-198 218-13 390 55 530 205v246H152V850z" fill="#052544"/>
+  <path d="M166 894c118-104 254-156 407-156 204 0 376 70 515 210v154H166V894z" fill="#163e66"/>
+  <circle cx="462" cy="456" r="124" fill="#f4cfa4"/>
+  <circle cx="760" cy="456" r="124" fill="#f4cfa4"/>
+  <path d="M342 442c14-88 70-144 135-144 71 0 122 49 132 128-55-27-117-36-267 16z" fill="#5d6132"/>
+  <path d="M640 441c14-88 70-143 135-143 72 0 124 51 133 130-63-31-142-31-268 13z" fill="#052544"/>
+  <circle cx="419" cy="457" r="12" fill="#052544"/>
+  <circle cx="505" cy="457" r="12" fill="#052544"/>
+  <circle cx="717" cy="457" r="12" fill="#052544"/>
+  <circle cx="803" cy="457" r="12" fill="#052544"/>
+  <path d="M420 516c27 31 62 31 89 0" fill="none" stroke="#052544" stroke-width="14" stroke-linecap="round"/>
+  <path d="M718 516c27 31 62 31 89 0" fill="none" stroke="#052544" stroke-width="14" stroke-linecap="round"/>
+  <path d="M276 820c28-129 108-197 238-197 95 0 166 38 213 113 45-75 116-113 213-113 130 0 210 68 238 197" fill="#ffffff"/>
+  <path d="M276 820c28-129 108-197 238-197 95 0 166 38 213 113 45-75 116-113 213-113 130 0 210 68 238 197" fill="none" stroke="#d9a93a" stroke-width="12" stroke-linecap="round"/>
+  <text x="627" y="972" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="800" text-anchor="middle">Coming Soon</text>
+  <path d="M426 1034h402" stroke="#d9a93a" stroke-width="16" stroke-linecap="round"/>
+</svg>
