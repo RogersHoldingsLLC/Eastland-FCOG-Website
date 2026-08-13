@@ -473,6 +473,10 @@ h3 {
   transition: transform 0.45s ease;
 }
 
+.leader-photo-associate img {
+  object-position: center;
+}
+
 .leader-card:hover .leader-photo img,
 .leader-card:focus-within .leader-photo img {
   transform: scale(1.035);
