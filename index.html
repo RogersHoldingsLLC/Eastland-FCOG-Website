@@ -83,7 +83,17 @@
         />
       </a>
 
-      <nav class="main-nav" aria-label="Main navigation">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        <span>Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
         <a href="#service-times">Services</a>
         <a href="#visit">Visit</a>
         <a href="#mission">Mission</a>
@@ -211,26 +221,23 @@
         </div>
       </section>
 
-      <section class="mission-section" id="mission" aria-labelledby="mission-title" style="text-align: center;">
-        <div>
-          <p class="eyebrow" style="text-align: center;">Our Mission</p>
-          <h2 id="mission-title" style="font-size: clamp(2.75rem, 5vw, 4.5rem);">
+      <section class="mission-section" id="mission" aria-labelledby="mission-title">
+        <div class="mission-inner">
+          <p class="eyebrow">Our Mission</p>
+          <h2 id="mission-title">
             A church family centered on Jesus Christ.
           </h2>
-          <p style="max-width: 850px; margin: 24px auto; font-size: 1.15rem; line-height: 1.8; text-align: center;">
+          <p class="mission-copy">
             Our mission is to help people know Jesus, grow in God's Word,
             worship together, care for one another, and share the hope of Christ
             with our community.
           </p>
 
-          <p style="max-width: 900px; margin: 36px auto 0; font-style: italic; opacity: .85; text-align: center;">
+          <blockquote class="mission-quote">
             "Love the Lord your God with all your heart and with all your soul and with all your mind...
             and love your neighbor as yourself."
-          </p>
-
-          <p style="margin-top: 12px; font-weight: 600; text-align: center;">
-            — Matthew 22:37–39
-          </p>
+            <cite>Matthew 22:37–39</cite>
+          </blockquote>
         </div>
       </section>
 
@@ -392,13 +399,16 @@
       <section class="giving-section" id="giving" aria-labelledby="giving-title">
         <div>
           <p class="eyebrow">Online Giving</p>
-          <h2 id="giving-title">Online Giving Coming Soon</h2>
+          <div class="giving-heading">
+            <h2 id="giving-title">Online Giving</h2>
+            <span class="status-badge">Coming Soon</span>
+          </div>
           <p>
             Online giving is not available yet, but it is being prepared. Please
             check back soon for updates from the church.
           </p>
         </div>
-        <a class="button primary" href="#connect">Ask About Giving</a>
+        <a class="text-link giving-link" href="#connect">Contact the church about giving</a>
       </section>
 
       <section class="app-section" id="mobile-app" aria-labelledby="mobile-app-title">
@@ -546,6 +556,32 @@
     </footer>
     <a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
     <script>
+      const navigationToggle = document.querySelector(".nav-toggle");
+      const mainNavigation = document.querySelector(".main-nav");
+      document.body.classList.add("nav-ready");
+
+      const closeNavigation = () => {
+        navigationToggle.setAttribute("aria-expanded", "false");
+        mainNavigation.classList.remove("is-open");
+      };
+
+      navigationToggle.addEventListener("click", () => {
+        const isOpen = navigationToggle.getAttribute("aria-expanded") === "true";
+        navigationToggle.setAttribute("aria-expanded", String(!isOpen));
+        mainNavigation.classList.toggle("is-open", !isOpen);
+      });
+
+      mainNavigation.addEventListener("click", (event) => {
+        if (event.target.closest("a")) closeNavigation();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeNavigation();
+          navigationToggle.focus();
+        }
+      });
+
       const backToTopButton = document.querySelector(".back-to-top");
       const toggleBackToTop = () => {
         backToTopButton.classList.toggle("is-visible", window.scrollY > 500);
