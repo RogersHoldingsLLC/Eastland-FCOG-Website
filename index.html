@@ -26,7 +26,20 @@
     <title>Eastland First Church of God</title>
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-    <link rel="preload" as="image" href="assets/images/eastland-church-hero.jpg" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/eastland-home-hero-v3.webp"
+      type="image/webp"
+      media="(min-width: 681px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/eastland-home-hero-v3-mobile.webp"
+      type="image/webp"
+      media="(max-width: 680px)"
+    />
     <meta property="og:site_name" content="Eastland First Church of God" />
     <meta property="og:title" content="Eastland First Church of God" />
     <meta
@@ -48,6 +61,12 @@
     <link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" type="image/png" />
     <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script type="application/ld+json">
       {
@@ -105,44 +124,77 @@
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="page-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Mount Sterling, Kentucky</p>
-          <h1 id="page-title">Eastland First Church of God</h1>
-          <p>
-            Join us as we worship together, grow in God's Word, and serve our
-            community from 1706 Old Owingsville Road.
-          </p>
-          <div class="hero-actions">
-            <a
-              class="button primary"
-              href="https://www.google.com/maps/search/?api=1&query=1706%20Old%20Owingsville%20Road%2C%20Mount%20Sterling%2C%20KY%2040353"
-            >
-              Get Directions
-            </a>
-            <a
-              class="button secondary"
-              href="https://www.facebook.com/EastlandFirstChurchOfGod"
-            >
-              Watch on Facebook
-            </a>
-          </div>
-        </div>
-
-        <picture class="hero-media">
+      <section class="hero hero-approved-v2" aria-labelledby="page-title">
+        <picture class="hero-backdrop">
           <source
-            srcset="assets/images/eastland-church-hero.jpg"
+            media="(max-width: 680px)"
+            srcset="assets/images/eastland-home-hero-v3-mobile.webp"
+            type="image/webp"
+          />
+          <source
+            srcset="assets/images/eastland-home-hero-v3.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 680px)"
+            srcset="assets/images/eastland-home-hero-v3-mobile.jpg"
             type="image/jpeg"
           />
           <img
-            src="assets/images/eastland-church-hero.jpg"
-            alt="Eastland First Church of God exterior at night with steeple and American flag"
-            width="1536"
-            height="1024"
+            src="assets/images/eastland-home-hero-v3.jpg"
+            alt="Eastland First Church of God at blue hour with its white steeple and cross"
+            width="1920"
+            height="1080"
             fetchpriority="high"
             decoding="async"
           />
         </picture>
+
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow eyebrow-on-dark">Eastland First Church of God · Mount Sterling, Kentucky</p>
+            <h1 id="page-title">
+              <span>A place to worship.</span>
+              <em>A family to belong to.</em>
+            </h1>
+            <p>
+              Come as you are. Worship Christ, grow in His Word, and find a church
+              family that will be genuinely glad to know you.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-gold" href="#service-times">Plan Your Visit</a>
+              <a
+                class="button button-ghost"
+                href="https://www.facebook.com/EastlandFirstChurchOfGod"
+              >
+                Watch on Facebook
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-service-note" aria-label="Sunday gathering times">
+            <span>Join us this Sunday</span>
+            <div class="hero-service-times">
+              <div>
+                <span class="hero-service-label">Sunday School</span>
+                <strong>10:00 <span class="hero-time-period">AM</span></strong>
+              </div>
+              <div>
+                <span class="hero-service-label">Morning Service</span>
+                <strong>11:00 <span class="hero-time-period">AM</span></strong>
+              </div>
+              <div>
+                <span class="hero-service-label">Sunday Evening</span>
+                <strong>6:00 <span class="hero-time-period">PM</span></strong>
+              </div>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&amp;query=1706%20Old%20Owingsville%20Road%2C%20Mount%20Sterling%2C%20KY%2040353"
+            >
+              1706 Old Owingsville Road <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
       </section>
 
       <section class="service-band" id="service-times" aria-labelledby="services-title">
