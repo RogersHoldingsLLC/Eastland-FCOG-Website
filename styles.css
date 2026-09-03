@@ -286,7 +286,8 @@
   }
 
   .hero-approved-v2 .hero-backdrop img {
-    object-position: 70% top;
+    object-fit: contain;
+    object-position: center top;
   }
 
   .hero-approved-v2 .hero-inner {
@@ -380,6 +381,10 @@ html {
 }
 
 section[id] {
+  scroll-margin-top: 150px;
+}
+
+#top {
   scroll-margin-top: 150px;
 }
 
@@ -1619,6 +1624,11 @@ h3 {
     scroll-margin-top: 150px;
   }
 
+  .visit-section .eyebrow,
+  #ministries .eyebrow {
+    color: #72520d;
+  }
+
   .hero,
   .service-band,
   .split-section,
@@ -2363,7 +2373,7 @@ h3 {
   text-transform: lowercase;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1120px) {
   .homecoming-banner {
     padding: 18px;
   }
@@ -2423,8 +2433,8 @@ h3 {
 
   .homecoming-banner-fellowship span {
     margin-top: 5px;
-    font-size: 0.56rem;
-    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
   }
 
   .homecoming-banner-guests {
@@ -2440,5 +2450,69 @@ h3 {
 
   .homecoming-banner-guests strong {
     font-size: clamp(1.55rem, 7.8vw, 1.95rem);
+  }
+}
+
+/* Focused phone refinements: preserve the approved desktop composition while
+   tightening long mobile sections and keeping sticky navigation targets clear. */
+@media (max-width: 680px) {
+  section[id] {
+    scroll-margin-top: 84px;
+  }
+
+  #top {
+    scroll-margin-top: 84px;
+  }
+
+  .hero.hero-approved-v2 {
+    min-height: min(780px, calc(100svh - 68px));
+  }
+
+  .service-band {
+    gap: 22px;
+  }
+
+  .time-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .time-grid article {
+    min-height: 118px;
+    padding: 18px 14px;
+  }
+
+  .time-grid span {
+    font-size: 0.94rem;
+    line-height: 1.35;
+  }
+
+  .time-grid strong {
+    margin-top: 10px;
+    font-size: clamp(1.34rem, 6vw, 1.65rem);
+  }
+
+  .connect-section > *,
+  .connect-list,
+  .connect-list a {
+    min-width: 0;
+  }
+
+  .connect-list a {
+    overflow-wrap: anywhere;
+  }
+
+  .site-footer {
+    gap: 8px;
+    padding-block: 16px;
+  }
+
+  .site-footer img {
+    width: 92px;
+  }
+
+  .site-footer address {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
