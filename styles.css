@@ -690,12 +690,13 @@ h3 {
 
 .time-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: clamp(12px, 1.6vw, 18px);
 }
 
 .time-grid article {
   position: relative;
+  grid-column: span 2;
   min-height: 142px;
   overflow: hidden;
   padding: 24px;
@@ -709,6 +710,14 @@ h3 {
     border-color 0.25s ease,
     box-shadow 0.25s ease,
     transform 0.25s ease;
+}
+
+.time-grid article:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.time-grid article:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .time-grid article::before {
@@ -1780,6 +1789,17 @@ h3 {
   .two-column,
   .four-column {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .time-grid article,
+  .time-grid article:nth-child(4) {
+    grid-column: auto;
+  }
+
+  .time-grid article:nth-child(5) {
+    grid-column: 1 / -1;
+    width: calc((100% - clamp(12px, 1.6vw, 18px)) / 2);
+    justify-self: center;
   }
 }
 

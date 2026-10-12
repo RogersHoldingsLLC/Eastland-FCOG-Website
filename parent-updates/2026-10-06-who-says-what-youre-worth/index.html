@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="A recap of Eastland Youth’s first Tuesday Youth Night on God-given worth, Genesis 1:26–31, Psalm 139:13–16, and continuing the conversation at home."
+      content="Our first Youth Night explored what it means to be made in God’s image. Read the recap and find a simple conversation starter for your family."
     />
     <meta name="theme-color" content="#052544" />
     <meta name="apple-mobile-web-app-title" content="Eastland First" />
@@ -26,17 +26,17 @@
       rel="canonical"
       href="https://eastlandfirstchurchofgod.com/parent-updates/2026-10-06-who-says-what-youre-worth/"
     />
-    <title>Our First Youth Night: Who Says What You’re Worth? | Eastland Youth</title>
+    <title>Who Says What You’re Worth? | Eastland Youth</title>
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <meta property="og:site_name" content="Eastland First Church of God" />
     <meta
       property="og:title"
-      content="Our First Youth Night: Who Says What You’re Worth?"
+      content="Who Says What You’re Worth? | Eastland Youth"
     />
     <meta
       property="og:description"
-      content="Eastland Youth’s Week 1 recap on God-given worth and continuing the conversation at home."
+      content="Our first Youth Night explored what it means to be made in God’s image. Read the recap and find a simple conversation starter for your family."
     />
     <meta property="og:type" content="article" />
     <meta
@@ -45,24 +45,33 @@
     />
     <meta
       property="og:image"
-      content="https://eastlandfirstchurchofgod.com/assets/images/Eastland_Youth_No_Blue_Transparent.png"
+      content="https://eastlandfirstchurchofgod.com/assets/images/eastland-youth-parent-updates-week-1-social.png"
     />
-    <meta property="og:image:alt" content="Eastland Youth logo" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta
+      property="og:image:alt"
+      content="Eastland Youth Parent Updates — Who Says What You’re Worth? Week 1 Recap, October 6, 2026"
+    />
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Our First Youth Night: Who Says What You’re Worth?"
+      content="Who Says What You’re Worth? | Eastland Youth"
     />
     <meta
       name="twitter:description"
-      content="Eastland Youth’s Week 1 recap on God-given worth and continuing the conversation at home."
+      content="Our first Youth Night explored what it means to be made in God’s image. Read the recap and find a simple conversation starter for your family."
     />
     <meta
       name="twitter:image"
-      content="https://eastlandfirstchurchofgod.com/assets/images/Eastland_Youth_No_Blue_Transparent.png"
+      content="https://eastlandfirstchurchofgod.com/assets/images/eastland-youth-parent-updates-week-1-social.png"
     />
-    <meta name="twitter:image:alt" content="Eastland Youth logo" />
+    <meta
+      name="twitter:image:alt"
+      content="Eastland Youth Parent Updates — Who Says What You’re Worth? Week 1 Recap, October 6, 2026"
+    />
     <link rel="icon" href="../../assets/icons/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="../../assets/icons/icon-192.png" sizes="192x192" type="image/png" />
     <link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
@@ -180,6 +189,34 @@
               <p>Keith &amp; Ali Rogers</p>
               <p>Youth Leaders · Eastland First Church of God</p>
             </div>
+
+            <section class="newsletter-share-panel" aria-labelledby="share-update-title">
+              <div class="newsletter-share-heading">
+                <h2 id="share-update-title">Share this update</h2>
+                <p>Share this recap with family and friends.</p>
+              </div>
+              <div class="newsletter-share-actions">
+                <button class="newsletter-share-button" type="button" data-share-update>
+                  Share
+                </button>
+                <button class="newsletter-copy-button" type="button" data-copy-update-link>
+                  Copy link
+                </button>
+              </div>
+              <p
+                class="newsletter-share-feedback"
+                role="status"
+                aria-live="polite"
+                data-share-feedback
+              ></p>
+              <p class="newsletter-share-fallback">
+                Direct link:
+                <a
+                  href="https://eastlandfirstchurchofgod.com/parent-updates/2026-10-06-who-says-what-youre-worth/"
+                  data-share-fallback-link
+                >eastlandfirstchurchofgod.com/parent-updates/2026-10-06-who-says-what-youre-worth/</a>
+              </p>
+            </section>
           </div>
 
           <footer class="newsletter-article-footer">
@@ -229,6 +266,116 @@
         if (event.key === "Escape") {
           closeNavigation();
           navigationToggle.focus();
+        }
+      });
+
+      const shareButton = document.querySelector("[data-share-update]");
+      const copyLinkButton = document.querySelector("[data-copy-update-link]");
+      const shareFeedback = document.querySelector("[data-share-feedback]");
+      const shareFallbackLink = document.querySelector("[data-share-fallback-link]");
+      const articleUrl = document.querySelector("link[rel=canonical]").href;
+      const shareData = {
+        title: "Who Says What You’re Worth? | Eastland Youth",
+        text: "Our first Youth Night explored what it means to be made in God’s image. Read the recap and find a simple conversation starter for your family.",
+        url: articleUrl,
+      };
+
+      const showShareFeedback = (message) => {
+        shareFeedback.textContent = message;
+      };
+
+      const copyArticleLink = async () => {
+        if (navigator.clipboard?.writeText && window.isSecureContext) {
+          try {
+            await navigator.clipboard.writeText(articleUrl);
+            return true;
+          } catch (error) {
+            // Continue to the selection-based fallback below.
+          }
+        }
+
+        const temporaryField = document.createElement("textarea");
+        temporaryField.value = articleUrl;
+        temporaryField.setAttribute("readonly", "");
+        temporaryField.style.position = "fixed";
+        temporaryField.style.opacity = "0";
+        document.body.appendChild(temporaryField);
+        temporaryField.select();
+
+        let copied = false;
+        try {
+          copied = document.execCommand("copy");
+        } catch (error) {
+          copied = false;
+        }
+
+        temporaryField.remove();
+        return copied;
+      };
+
+      copyLinkButton.addEventListener("click", async () => {
+        try {
+          const copied = await copyArticleLink();
+          if (copied) {
+            showShareFeedback("Link copied.");
+          } else {
+            showShareFeedback("Copy the direct link below.");
+            shareFallbackLink.focus();
+          }
+        } catch (error) {
+          showShareFeedback("Copy the direct link below.");
+          shareFallbackLink.focus();
+        }
+      });
+
+      shareButton.addEventListener("click", async () => {
+        let canUseNativeShare = typeof navigator.share === "function";
+
+        if (canUseNativeShare && typeof navigator.canShare === "function") {
+          try {
+            canUseNativeShare = navigator.canShare(shareData);
+          } catch (error) {
+            canUseNativeShare = false;
+          }
+        }
+
+        if (canUseNativeShare) {
+          try {
+            await navigator.share(shareData);
+            showShareFeedback("Sharing options opened.");
+          } catch (error) {
+            if (error.name === "AbortError") {
+              showShareFeedback("Sharing canceled.");
+              return;
+            }
+
+            let copied = false;
+            try {
+              copied = await copyArticleLink();
+            } catch (copyError) {
+              copied = false;
+            }
+            showShareFeedback(
+              copied
+                ? "Sharing is unavailable. The link was copied instead."
+                : "Sharing is unavailable. Use the direct link below.",
+            );
+            if (!copied) shareFallbackLink.focus();
+          }
+          return;
+        }
+
+        try {
+          const copied = await copyArticleLink();
+          showShareFeedback(
+            copied
+              ? "Sharing is unavailable in this browser. The link was copied instead."
+              : "Sharing is unavailable. Use the direct link below.",
+          );
+          if (!copied) shareFallbackLink.focus();
+        } catch (error) {
+          showShareFeedback("Sharing is unavailable. Use the direct link below.");
+          shareFallbackLink.focus();
         }
       });
 
