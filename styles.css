@@ -2684,3 +2684,51 @@ h3 {
     line-height: 1.5;
   }
 }
+
+/* Typography-only Eastland review. Preserve the live copy, layout, photo,
+   header, eyebrow, buttons and every color; distinguish the welcome lettering. */
+.hero.hero-approved-v2 h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+}
+.hero.hero-approved-v2 h1 em {
+  font-style: normal;
+  font-weight: inherit;
+}
+
+/* Restrained readability polish. Keep the approved page composition, photo,
+   palette, copy and destinations; no new sections or navigation behavior. */
+.section-heading h2,
+.mission-section h2,
+.connect-section h2 {
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.info-card h3,
+.image-card h3 {
+  line-height: 1.25;
+}
+.button {
+  line-height: 1.35;
+  text-align: center;
+}
+.hero-approved-v2 .button {
+  font-size: 0.875rem;
+  letter-spacing: 0.07em;
+  line-height: 1.35;
+}
+.visit-section .info-card > p:last-child {
+  font-size: 1rem;
+}
+@media (max-width: 680px) {
+  .time-grid span {
+    font-size: 1rem;
+  }
+  .youth-night-lesson p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+  .section-heading {
+    margin-bottom: 24px;
+  }
+}
